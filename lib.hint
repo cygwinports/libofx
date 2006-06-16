@@ -1,0 +1,7 @@
+category: Libs
+requires: cygwin OpenSP
+external-source: libofx
+sdesc: "OFX parser runtime library"
+ldesc: "This is the LibOFX library.  It is a API designed to allow
+applications to very easily support OFX command responses,
+usually provided by financial institutions."
