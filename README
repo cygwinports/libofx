@@ -274,7 +274,7 @@ Files included in the binary package:
 Port Notes:
 
 ----- version 0.8.2-1 -----
-Version and ABI bump.
+Version and ABI bump, now built with cygport.
 
 ----- version 0.8.0-1 -----
 Version and ABI bump; now depends on libcurl3 for ofxconnect.
