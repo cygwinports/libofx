@@ -1,5 +1,5 @@
 category: Devel Utils
-requires: cygwin OpenSP libcurl3 libofx3 libxml++10
+requires: cygwin OpenSP libcurl4 libofx4 libxml++26
 sdesc: "OFX parser library (utilities)"
 ldesc: "This is the LibOFX library.  It is a API designed to allow
 applications to very easily support OFX command responses,

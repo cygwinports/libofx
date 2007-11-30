@@ -5,18 +5,18 @@ applications to very easily support OFX command responses,
 usually provided by financial institutions.
 
 Runtime requirements:
-  cygwin-1.5.23-2
+  cygwin-1.5.24-2
   OpenSP-1.5.1-1
-  libcurl3-7.15.4-1
-  libxml++10-1.0.5-2
+  libcurl4-7.16.3-1
+  libxml++26-2.18.2-1
 
 Build requirements:
 (besides corresponding devel packages)
-  cygwin-1.5.23-2
-  autoconf2.5-2.60-2
+  cygwin-1.5.24-2
+  autoconf2.5-2.61-1
   automake1.9-1.9.6-2
   binutils-20060817-1
-  cygport-0.2.8-1
+  cygport-0.3.7-1
   doxygen-1.5.1-1
   gawk-3.1.5-4
   gcc-core-3.4.4-3
@@ -35,243 +35,106 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack libofx-0.8.3-X-src.tar.bz2
+  unpack libofx-0.9.0-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./libofx-0.8.3-X.cygport all
+  cygport ./libofx-0.9.0-X.cygport all
 
 This will create:
-  /usr/src/libofx-0.8.3-X-src.tar.bz2
-  /usr/src/libofx-0.8.3-X.tar.bz2
-  /usr/src/libofx-devel-0.8.3-X.tar.bz2
-  /usr/src/libofx-doc-0.8.3-X.tar.bz2
-  /usr/src/libofx3-0.8.3-X.tar.bz2
+  /usr/src/libofx-0.9.0-X-src.tar.bz2
+  /usr/src/libofx-0.9.0-X.tar.bz2
+  /usr/src/libofx-devel-0.9.0-X.tar.bz2
+  /usr/src/libofx-doc-0.9.0-X.tar.bz2
+  /usr/src/libofx4-0.9.0-X.tar.bz2
 
 -------------------------------------------
 
-Files included in the binary package:
+Files included in the binary packages:
 
+(libofx)
   /usr/bin/ofx2qif.exe
   /usr/bin/ofxconnect.exe
   /usr/bin/ofxdump.exe
-  /usr/share/doc/Cygwin/libofx-0.8.3.README
-  /usr/share/doc/libofx-0.8.3/AUTHORS
-  /usr/share/doc/libofx-0.8.3/ChangeLog
-  /usr/share/doc/libofx-0.8.3/COPYING
-  /usr/share/doc/libofx-0.8.3/INSTALL
-  /usr/share/doc/libofx-0.8.3/NEWS
-  /usr/share/doc/libofx-0.8.3/README
-  /usr/share/doc/libofx-0.8.3/totest.txt
+  /usr/share/doc/Cygwin/libofx-0.9.0.README
+  /usr/share/doc/libofx-0.9.0/AUTHORS
+  /usr/share/doc/libofx-0.9.0/COPYING
+  /usr/share/doc/libofx-0.9.0/ChangeLog
+  /usr/share/doc/libofx-0.9.0/INSTALL
+  /usr/share/doc/libofx-0.9.0/NEWS
+  /usr/share/doc/libofx-0.9.0/README
+  /usr/share/doc/libofx-0.9.0/totest.txt
   /usr/share/libofx/dtd/ofc.dtd
   /usr/share/libofx/dtd/ofx160.dtd
   /usr/share/libofx/dtd/ofx201.dtd
   /usr/share/libofx/dtd/opensp.dcl
 
-(libofx3)
-  /usr/bin/cygofx-3.dll
+(libofx4)
+  /usr/bin/cygofx-4.dll
 
 (libofx-devel)
   /usr/include/libofx/libofx.h
+  /usr/lib/libofx.a
   /usr/lib/libofx.dll.a
   /usr/lib/libofx.la
   /usr/lib/pkgconfig/libofx.pc
-
-(libofx-doc)
-  /usr/share/doc/libofx-0.8.3/html/annotated.html
-  /usr/share/doc/libofx-0.8.3/html/classLibofxContext.html
-  /usr/share/doc/libofx-0.8.3/html/classOFCApplication.html
-  /usr/share/doc/libofx-0.8.3/html/classOFXApplication.html
-  /usr/share/doc/libofx-0.8.3/html/classOfxAccountContainer.html
-  /usr/share/doc/libofx-0.8.3/html/classOfxAccountContainer.png
-  /usr/share/doc/libofx-0.8.3/html/classOfxAccountInfoRequest.html
-  /usr/share/doc/libofx-0.8.3/html/classOfxAccountInfoRequest.png
-  /usr/share/doc/libofx-0.8.3/html/classOfxAggregate.html
-  /usr/share/doc/libofx-0.8.3/html/classOfxAggregate.png
-  /usr/share/doc/libofx-0.8.3/html/classOfxBalanceContainer.html
-  /usr/share/doc/libofx-0.8.3/html/classOfxBalanceContainer.png
-  /usr/share/doc/libofx-0.8.3/html/classOfxBankTransactionContainer.html
-  /usr/share/doc/libofx-0.8.3/html/classOfxBankTransactionContainer.png
-  /usr/share/doc/libofx-0.8.3/html/classOfxDummyContainer.html
-  /usr/share/doc/libofx-0.8.3/html/classOfxDummyContainer.png
-  /usr/share/doc/libofx-0.8.3/html/classOfxGenericContainer.html
-  /usr/share/doc/libofx-0.8.3/html/classOfxGenericContainer.png
-  /usr/share/doc/libofx-0.8.3/html/classOfxInvestmentTransactionContainer.html
-  /usr/share/doc/libofx-0.8.3/html/classOfxInvestmentTransactionContainer.png
-  /usr/share/doc/libofx-0.8.3/html/classOfxMainContainer.html
-  /usr/share/doc/libofx-0.8.3/html/classOfxMainContainer.png
-  /usr/share/doc/libofx-0.8.3/html/classOfxPaymentRequest.html
-  /usr/share/doc/libofx-0.8.3/html/classOfxPaymentRequest.png
-  /usr/share/doc/libofx-0.8.3/html/classOfxPushUpContainer.html
-  /usr/share/doc/libofx-0.8.3/html/classOfxPushUpContainer.png
-  /usr/share/doc/libofx-0.8.3/html/classOfxRequest.html
-  /usr/share/doc/libofx-0.8.3/html/classOfxRequest.png
-  /usr/share/doc/libofx-0.8.3/html/classOfxSecurityContainer.html
-  /usr/share/doc/libofx-0.8.3/html/classOfxSecurityContainer.png
-  /usr/share/doc/libofx-0.8.3/html/classOfxStatementContainer.html
-  /usr/share/doc/libofx-0.8.3/html/classOfxStatementContainer.png
-  /usr/share/doc/libofx-0.8.3/html/classOfxStatementRequest.html
-  /usr/share/doc/libofx-0.8.3/html/classOfxStatementRequest.png
-  /usr/share/doc/libofx-0.8.3/html/classOfxStatusContainer.html
-  /usr/share/doc/libofx-0.8.3/html/classOfxStatusContainer.png
-  /usr/share/doc/libofx-0.8.3/html/classOfxTransactionContainer.html
-  /usr/share/doc/libofx-0.8.3/html/classOfxTransactionContainer.png
-  /usr/share/doc/libofx-0.8.3/html/classtree.html
-  /usr/share/doc/libofx-0.8.3/html/classtree_1_1fixed__depth__iterator.html
-  /usr/share/doc/libofx-0.8.3/html/classtree_1_1fixed__depth__iterator.png
-  /usr/share/doc/libofx-0.8.3/html/classtree_1_1iterator__base.html
-  /usr/share/doc/libofx-0.8.3/html/classtree_1_1iterator__base.png
-  /usr/share/doc/libofx-0.8.3/html/classtree_1_1iterator__base__less.html
-  /usr/share/doc/libofx-0.8.3/html/classtree_1_1post__order__iterator.html
-  /usr/share/doc/libofx-0.8.3/html/classtree_1_1post__order__iterator.png
-  /usr/share/doc/libofx-0.8.3/html/classtree_1_1pre__order__iterator.html
-  /usr/share/doc/libofx-0.8.3/html/classtree_1_1pre__order__iterator.png
-  /usr/share/doc/libofx-0.8.3/html/classtree_1_1sibling__iterator.html
-  /usr/share/doc/libofx-0.8.3/html/classtree_1_1sibling__iterator.png
-  /usr/share/doc/libofx-0.8.3/html/classtree__node__.html
-  /usr/share/doc/libofx-0.8.3/html/context_8cpp-source.html
-  /usr/share/doc/libofx-0.8.3/html/context_8hh-source.html
-  /usr/share/doc/libofx-0.8.3/html/doxygen.css
-  /usr/share/doc/libofx-0.8.3/html/doxygen.png
-  /usr/share/doc/libofx-0.8.3/html/file__preproc_8cpp-source.html
-  /usr/share/doc/libofx-0.8.3/html/file__preproc_8cpp.html
-  /usr/share/doc/libofx-0.8.3/html/file__preproc_8hh-source.html
-  /usr/share/doc/libofx-0.8.3/html/file__preproc_8hh.html
-  /usr/share/doc/libofx-0.8.3/html/files.html
-  /usr/share/doc/libofx-0.8.3/html/ftv2blank.png
-  /usr/share/doc/libofx-0.8.3/html/ftv2doc.png
-  /usr/share/doc/libofx-0.8.3/html/ftv2folderclosed.png
-  /usr/share/doc/libofx-0.8.3/html/ftv2folderopen.png
-  /usr/share/doc/libofx-0.8.3/html/ftv2lastnode.png
-  /usr/share/doc/libofx-0.8.3/html/ftv2link.png
-  /usr/share/doc/libofx-0.8.3/html/ftv2mlastnode.png
-  /usr/share/doc/libofx-0.8.3/html/ftv2mnode.png
-  /usr/share/doc/libofx-0.8.3/html/ftv2node.png
-  /usr/share/doc/libofx-0.8.3/html/ftv2plastnode.png
-  /usr/share/doc/libofx-0.8.3/html/ftv2pnode.png
-  /usr/share/doc/libofx-0.8.3/html/ftv2vertline.png
-  /usr/share/doc/libofx-0.8.3/html/functions.html
-  /usr/share/doc/libofx-0.8.3/html/functions_0x62.html
-  /usr/share/doc/libofx-0.8.3/html/functions_0x63.html
-  /usr/share/doc/libofx-0.8.3/html/functions_0x64.html
-  /usr/share/doc/libofx-0.8.3/html/functions_0x65.html
-  /usr/share/doc/libofx-0.8.3/html/functions_0x66.html
-  /usr/share/doc/libofx-0.8.3/html/functions_0x67.html
-  /usr/share/doc/libofx-0.8.3/html/functions_0x68.html
-  /usr/share/doc/libofx-0.8.3/html/functions_0x69.html
-  /usr/share/doc/libofx-0.8.3/html/functions_0x6c.html
-  /usr/share/doc/libofx-0.8.3/html/functions_0x6d.html
-  /usr/share/doc/libofx-0.8.3/html/functions_0x6e.html
-  /usr/share/doc/libofx-0.8.3/html/functions_0x6f.html
-  /usr/share/doc/libofx-0.8.3/html/functions_0x70.html
-  /usr/share/doc/libofx-0.8.3/html/functions_0x72.html
-  /usr/share/doc/libofx-0.8.3/html/functions_0x73.html
-  /usr/share/doc/libofx-0.8.3/html/functions_0x74.html
-  /usr/share/doc/libofx-0.8.3/html/functions_0x75.html
-  /usr/share/doc/libofx-0.8.3/html/functions_0x76.html
-  /usr/share/doc/libofx-0.8.3/html/functions_0x77.html
-  /usr/share/doc/libofx-0.8.3/html/functions_0x7e.html
-  /usr/share/doc/libofx-0.8.3/html/functions_enum.html
-  /usr/share/doc/libofx-0.8.3/html/functions_eval.html
-  /usr/share/doc/libofx-0.8.3/html/functions_func.html
-  /usr/share/doc/libofx-0.8.3/html/functions_type.html
-  /usr/share/doc/libofx-0.8.3/html/functions_vars.html
-  /usr/share/doc/libofx-0.8.3/html/getopt1_8c-source.html
-  /usr/share/doc/libofx-0.8.3/html/getopt_8c-source.html
-  /usr/share/doc/libofx-0.8.3/html/globals.html
-  /usr/share/doc/libofx-0.8.3/html/globals_defs.html
-  /usr/share/doc/libofx-0.8.3/html/globals_enum.html
-  /usr/share/doc/libofx-0.8.3/html/globals_eval.html
-  /usr/share/doc/libofx-0.8.3/html/globals_func.html
-  /usr/share/doc/libofx-0.8.3/html/globals_type.html
-  /usr/share/doc/libofx-0.8.3/html/globals_vars.html
-  /usr/share/doc/libofx-0.8.3/html/gnugetopt_8h-source.html
-  /usr/share/doc/libofx-0.8.3/html/hierarchy.html
-  /usr/share/doc/libofx-0.8.3/html/index.html
-  /usr/share/doc/libofx-0.8.3/html/libofx_8h-source.html
-  /usr/share/doc/libofx-0.8.3/html/libofx_8h.html
-  /usr/share/doc/libofx-0.8.3/html/main.html
-  /usr/share/doc/libofx-0.8.3/html/messages_8cpp-source.html
-  /usr/share/doc/libofx-0.8.3/html/messages_8cpp.html
-  /usr/share/doc/libofx-0.8.3/html/messages_8hh-source.html
-  /usr/share/doc/libofx-0.8.3/html/messages_8hh.html
-  /usr/share/doc/libofx-0.8.3/html/namespacekp.html
-  /usr/share/doc/libofx-0.8.3/html/namespacemembers.html
-  /usr/share/doc/libofx-0.8.3/html/namespacemembers_func.html
-  /usr/share/doc/libofx-0.8.3/html/namespaces.html
-  /usr/share/doc/libofx-0.8.3/html/ofc__sgml_8cpp-source.html
-  /usr/share/doc/libofx-0.8.3/html/ofc__sgml_8cpp.html
-  /usr/share/doc/libofx-0.8.3/html/ofc__sgml_8hh-source.html
-  /usr/share/doc/libofx-0.8.3/html/ofc__sgml_8hh.html
-  /usr/share/doc/libofx-0.8.3/html/ofx__aggregate_8hh-source.html
-  /usr/share/doc/libofx-0.8.3/html/ofx__aggregate_8hh.html
-  /usr/share/doc/libofx-0.8.3/html/ofx__container__account_8cpp-source.html
-  /usr/share/doc/libofx-0.8.3/html/ofx__container__account_8cpp.html
-  /usr/share/doc/libofx-0.8.3/html/ofx__container__generic_8cpp-source.html
-  /usr/share/doc/libofx-0.8.3/html/ofx__container__generic_8cpp.html
-  /usr/share/doc/libofx-0.8.3/html/ofx__container__main_8cpp-source.html
-  /usr/share/doc/libofx-0.8.3/html/ofx__container__main_8cpp.html
-  /usr/share/doc/libofx-0.8.3/html/ofx__container__security_8cpp-source.html
-  /usr/share/doc/libofx-0.8.3/html/ofx__container__security_8cpp.html
-  /usr/share/doc/libofx-0.8.3/html/ofx__container__statement_8cpp-source.html
-  /usr/share/doc/libofx-0.8.3/html/ofx__container__statement_8cpp.html
-  /usr/share/doc/libofx-0.8.3/html/ofx__container__transaction_8cpp-source.html
-  /usr/share/doc/libofx-0.8.3/html/ofx__container__transaction_8cpp.html
-  /usr/share/doc/libofx-0.8.3/html/ofx__containers_8hh-source.html
-  /usr/share/doc/libofx-0.8.3/html/ofx__containers_8hh.html
-  /usr/share/doc/libofx-0.8.3/html/ofx__containers__misc_8cpp-source.html
-  /usr/share/doc/libofx-0.8.3/html/ofx__containers__misc_8cpp.html
-  /usr/share/doc/libofx-0.8.3/html/ofx__error__msg_8hh-source.html
-  /usr/share/doc/libofx-0.8.3/html/ofx__error__msg_8hh.html
-  /usr/share/doc/libofx-0.8.3/html/ofx__preproc_8cpp-source.html
-  /usr/share/doc/libofx-0.8.3/html/ofx__preproc_8cpp.html
-  /usr/share/doc/libofx-0.8.3/html/ofx__preproc_8hh-source.html
-  /usr/share/doc/libofx-0.8.3/html/ofx__preproc_8hh.html
-  /usr/share/doc/libofx-0.8.3/html/ofx__request_8cpp-source.html
-  /usr/share/doc/libofx-0.8.3/html/ofx__request_8cpp.html
-  /usr/share/doc/libofx-0.8.3/html/ofx__request_8hh-source.html
-  /usr/share/doc/libofx-0.8.3/html/ofx__request_8hh.html
-  /usr/share/doc/libofx-0.8.3/html/ofx__request__accountinfo_8cpp-source.html
-  /usr/share/doc/libofx-0.8.3/html/ofx__request__accountinfo_8cpp.html
-  /usr/share/doc/libofx-0.8.3/html/ofx__request__accountinfo_8hh-source.html
-  /usr/share/doc/libofx-0.8.3/html/ofx__request__accountinfo_8hh.html
-  /usr/share/doc/libofx-0.8.3/html/ofx__request__statement_8cpp-source.html
-  /usr/share/doc/libofx-0.8.3/html/ofx__request__statement_8cpp.html
-  /usr/share/doc/libofx-0.8.3/html/ofx__request__statement_8hh-source.html
-  /usr/share/doc/libofx-0.8.3/html/ofx__request__statement_8hh.html
-  /usr/share/doc/libofx-0.8.3/html/ofx__sgml_8cpp-source.html
-  /usr/share/doc/libofx-0.8.3/html/ofx__sgml_8cpp.html
-  /usr/share/doc/libofx-0.8.3/html/ofx__sgml_8hh-source.html
-  /usr/share/doc/libofx-0.8.3/html/ofx__sgml_8hh.html
-  /usr/share/doc/libofx-0.8.3/html/ofx__utilities_8cpp-source.html
-  /usr/share/doc/libofx-0.8.3/html/ofx__utilities_8cpp.html
-  /usr/share/doc/libofx-0.8.3/html/ofx__utilities_8hh-source.html
-  /usr/share/doc/libofx-0.8.3/html/ofx__utilities_8hh.html
-  /usr/share/doc/libofx-0.8.3/html/structErrorMsg.html
-  /usr/share/doc/libofx-0.8.3/html/structLibofxFileFormatInfo.html
-  /usr/share/doc/libofx-0.8.3/html/structOfxAccountData.html
-  /usr/share/doc/libofx-0.8.3/html/structOfxAccountInfo.html
-  /usr/share/doc/libofx-0.8.3/html/structOfxCurrency.html
-  /usr/share/doc/libofx-0.8.3/html/structOfxFiLogin.html
-  /usr/share/doc/libofx-0.8.3/html/structOfxFiServiceInfo.html
-  /usr/share/doc/libofx-0.8.3/html/structOfxPayee.html
-  /usr/share/doc/libofx-0.8.3/html/structOfxPayment.html
-  /usr/share/doc/libofx-0.8.3/html/structOfxSecurityData.html
-  /usr/share/doc/libofx-0.8.3/html/structOfxStatementData.html
-  /usr/share/doc/libofx-0.8.3/html/structOfxStatusData.html
-  /usr/share/doc/libofx-0.8.3/html/structOfxTransactionData.html
-  /usr/share/doc/libofx-0.8.3/html/structoption.html
-  /usr/share/doc/libofx-0.8.3/html/tab_b.gif
-  /usr/share/doc/libofx-0.8.3/html/tab_l.gif
-  /usr/share/doc/libofx-0.8.3/html/tab_r.gif
-  /usr/share/doc/libofx-0.8.3/html/tabs.css
-  /usr/share/doc/libofx-0.8.3/html/tree.html
-  /usr/share/doc/libofx-0.8.3/html/tree_8hh-source.html
-  /usr/share/doc/libofx-0.8.3/totest.txt
+  /usr/share/doc/libofx-0.9.0/html/annotated.html
+  /usr/share/doc/libofx-0.9.0/html/config_8h-source.html
+  /usr/share/doc/libofx-0.9.0/html/doxygen.css
+  /usr/share/doc/libofx-0.9.0/html/doxygen.png
+  /usr/share/doc/libofx-0.9.0/html/files.html
+  /usr/share/doc/libofx-0.9.0/html/ftv2blank.png
+  /usr/share/doc/libofx-0.9.0/html/ftv2doc.png
+  /usr/share/doc/libofx-0.9.0/html/ftv2folderclosed.png
+  /usr/share/doc/libofx-0.9.0/html/ftv2folderopen.png
+  /usr/share/doc/libofx-0.9.0/html/ftv2lastnode.png
+  /usr/share/doc/libofx-0.9.0/html/ftv2link.png
+  /usr/share/doc/libofx-0.9.0/html/ftv2mlastnode.png
+  /usr/share/doc/libofx-0.9.0/html/ftv2mnode.png
+  /usr/share/doc/libofx-0.9.0/html/ftv2node.png
+  /usr/share/doc/libofx-0.9.0/html/ftv2plastnode.png
+  /usr/share/doc/libofx-0.9.0/html/ftv2pnode.png
+  /usr/share/doc/libofx-0.9.0/html/ftv2vertline.png
+  /usr/share/doc/libofx-0.9.0/html/functions.html
+  /usr/share/doc/libofx-0.9.0/html/functions_enum.html
+  /usr/share/doc/libofx-0.9.0/html/functions_eval.html
+  /usr/share/doc/libofx-0.9.0/html/functions_vars.html
+  /usr/share/doc/libofx-0.9.0/html/globals.html
+  /usr/share/doc/libofx-0.9.0/html/globals_enum.html
+  /usr/share/doc/libofx-0.9.0/html/globals_eval.html
+  /usr/share/doc/libofx-0.9.0/html/globals_func.html
+  /usr/share/doc/libofx-0.9.0/html/globals_type.html
+  /usr/share/doc/libofx-0.9.0/html/globals_vars.html
+  /usr/share/doc/libofx-0.9.0/html/index.html
+  /usr/share/doc/libofx-0.9.0/html/libofx_8h-source.html
+  /usr/share/doc/libofx-0.9.0/html/libofx_8h.html
+  /usr/share/doc/libofx-0.9.0/html/lt-ofx2qif_8c-source.html
+  /usr/share/doc/libofx-0.9.0/html/lt-ofxconnect_8c-source.html
+  /usr/share/doc/libofx-0.9.0/html/lt-ofxdump_8c-source.html
+  /usr/share/doc/libofx-0.9.0/html/main.html
+  /usr/share/doc/libofx-0.9.0/html/structLibofxFileFormatInfo.html
+  /usr/share/doc/libofx-0.9.0/html/structOfxAccountData.html
+  /usr/share/doc/libofx-0.9.0/html/structOfxCurrency.html
+  /usr/share/doc/libofx-0.9.0/html/structOfxFiLogin.html
+  /usr/share/doc/libofx-0.9.0/html/structOfxFiServiceInfo.html
+  /usr/share/doc/libofx-0.9.0/html/structOfxPayee.html
+  /usr/share/doc/libofx-0.9.0/html/structOfxPayment.html
+  /usr/share/doc/libofx-0.9.0/html/structOfxSecurityData.html
+  /usr/share/doc/libofx-0.9.0/html/structOfxStatementData.html
+  /usr/share/doc/libofx-0.9.0/html/structOfxStatusData.html
+  /usr/share/doc/libofx-0.9.0/html/structOfxTransactionData.html
+  /usr/share/doc/libofx-0.9.0/html/tab_b.gif
+  /usr/share/doc/libofx-0.9.0/html/tab_l.gif
+  /usr/share/doc/libofx-0.9.0/html/tab_r.gif
+  /usr/share/doc/libofx-0.9.0/html/tabs.css
+  /usr/share/doc/libofx-0.9.0/html/tree.html
 
 ------------------
 
 Port Notes:
+
+----- version 0.9.0-1 -----
+ABI version bump.
 
 ----- version 0.8.3-1 -----
 Version bump.
