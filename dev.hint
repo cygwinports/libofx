@@ -1,5 +1,5 @@
 category: Libs
-requires: cygwin OpenSP
+requires: cygwin libofx4 libiconv libosp-devel libstdc++6-devel
 external-source: libofx
 sdesc: "OFX parser library (development)"
 ldesc: "This is the LibOFX library.  It is a API designed to allow

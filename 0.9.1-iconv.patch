@@ -1,0 +1,11 @@
+--- origsrc/libofx-0.9.1/lib/ofx_preproc.cpp	2008-12-06 16:22:57.000000000 -0600
++++ src/libofx-0.9.1/lib/ofx_preproc.cpp	2009-03-20 17:18:33.627750000 -0500
+@@ -185,7 +185,7 @@ CFCT int ofx_proc_file(LibofxContextPtr 
+ 	    memset(iconv_buffer,0,READ_BUFFER_SIZE * 2);
+ 	    size_t inbytesleft = strlen(s_buffer.c_str());
+ 	    size_t outbytesleft = READ_BUFFER_SIZE * 2 - 1;
+-#ifdef OS_WIN32
++#if defined(OS_WIN32) || defined(__CYGWIN__)
+ 	    const char * inchar = (const char *)s_buffer.c_str();
+ #else
+ 	    char * inchar = (char *)s_buffer.c_str();

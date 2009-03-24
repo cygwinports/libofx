@@ -1,0 +1,25 @@
+DESCRIPTION="Open Financial eXchange client"
+HOMEPAGE="http://libofx.sourceforge.net/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+PATCH_URI="mirror://portage/dev-libs/${PN}/files/${PN}-0.9.0-gcc43.patch
+           0.9.1-iconv.patch
+           0.9.1-libxmlpp26.patch
+           0.9.1-vpath.patch"
+
+PKG_NAMES="${PN} ${PN}4 ${PN}-devel"
+PKG_HINTS="setup lib dev"
+libofx_CONTENTS="--exclude=html usr/bin/*.exe usr/share/"
+libofx4_CONTENTS="usr/bin/cygofx-4.dll"
+libofx_devel_CONTENTS="usr/include/ usr/lib/ usr/share/doc/${PN}/html/"
+
+DIFF_EXCLUDES="libofx.pc"
+
+src_compile() {
+	cd ${S}
+	cygautoreconf
+	cd ${B}
+	cygconf
+	cygmake all doc
+}
+
+DOCS="totest.txt"

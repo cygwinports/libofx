@@ -1,0 +1,11 @@
+--- origsrc/libofx-0.9.1/doc/Makefile.am	2005-07-31 14:48:50.000000000 -0500
++++ src/libofx-0.9.1/doc/Makefile.am	2009-03-20 17:18:58.612125000 -0500
+@@ -15,7 +15,7 @@ doc: html/
+ html/: doxygen.cfg
+ 	echo "doc: " && pwd && 	echo "distdir: " && echo $(distdir)
+ 	rm -rf html/ refman.pdf
+-	$(DOXYGEN) doxygen.cfg
++	$(DOXYGEN) $<
+ #	$(MAKE) -C latex/ 
+ #	mv latex/refman.pdf ./refman.pdf
+ 

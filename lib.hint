@@ -1,5 +1,5 @@
 category: Libs
-requires: cygwin OpenSP
+requires: cygwin libgcc1 libiconv2 libosp5 libstdc++6
 external-source: libofx
 sdesc: "OFX parser library (runtime)"
 ldesc: "This is the LibOFX library.  It is a API designed to allow

@@ -5,25 +5,26 @@ applications to very easily support OFX command responses,
 usually provided by financial institutions.
 
 Runtime requirements:
-  cygwin-1.5.24-2
-  OpenSP-1.5.1-1
+  cygwin-1.7.0-44
   libcurl4-7.16.3-1
-  libxml++26-2.18.2-1
+  libgcc1-4.3.2-2
+  libglibmm2.4_1-2.20.0-1
+  libosp5-1.5.2-1
+  libstdc++6-4.3.2-2
+  libxml++2.6_2-2.26.0-1
 
 Build requirements:
 (besides corresponding devel packages)
-  cygwin-1.5.24-2
-  autoconf2.5-2.61-1
-  automake1.9-1.9.6-2
-  binutils-20060817-1
-  cygport-0.3.7-1
-  doxygen-1.5.1-1
-  gawk-3.1.5-4
-  gcc-core-3.4.4-3
-  gcc-g++-3.4.4-3
-  libtool1.5-1.5.23a-2
-  make-3.81-1
-  pkg-config-0.21-1
+  autoconf2.5-2.63-1
+  automake1.9-1.9.6-10
+  binutils-20080624-2
+  cygport-0.9.6-1
+  gawk-3.1.6-2
+  gcc4-core-4.3.2-2
+  gcc4-g++-4.3.2-2
+  libtool-2.2.6a-1
+  make-3.81-2
+  pkg-config-0.23a-2
   sed-4.1.5-2
 
 Canonical homepage:
@@ -35,18 +36,18 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack libofx-0.9.0-X-src.tar.bz2
+  unpack libofx-0.9.1-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./libofx-0.9.0-X.cygport all
+  cygport ./libofx-0.9.1-X.cygport all
 
 This will create:
-  /usr/src/libofx-0.9.0-X-src.tar.bz2
-  /usr/src/libofx-0.9.0-X.tar.bz2
-  /usr/src/libofx-devel-0.9.0-X.tar.bz2
-  /usr/src/libofx-doc-0.9.0-X.tar.bz2
-  /usr/src/libofx4-0.9.0-X.tar.bz2
+  /usr/src/libofx-0.9.1-X-src.tar.bz2
+  /usr/src/libofx-0.9.1-X.tar.bz2
+  /usr/src/libofx-devel-0.9.1-X.tar.bz2
+  /usr/src/libofx-doc-0.9.1-X.tar.bz2
+  /usr/src/libofx4-0.9.1-X.tar.bz2
 
 -------------------------------------------
 
@@ -56,14 +57,12 @@ Files included in the binary packages:
   /usr/bin/ofx2qif.exe
   /usr/bin/ofxconnect.exe
   /usr/bin/ofxdump.exe
-  /usr/share/doc/Cygwin/libofx-0.9.0.README
-  /usr/share/doc/libofx-0.9.0/AUTHORS
-  /usr/share/doc/libofx-0.9.0/COPYING
-  /usr/share/doc/libofx-0.9.0/ChangeLog
-  /usr/share/doc/libofx-0.9.0/INSTALL
-  /usr/share/doc/libofx-0.9.0/NEWS
-  /usr/share/doc/libofx-0.9.0/README
-  /usr/share/doc/libofx-0.9.0/totest.txt
+  /usr/share/doc/libofx/AUTHORS
+  /usr/share/doc/libofx/COPYING
+  /usr/share/doc/libofx/ChangeLog
+  /usr/share/doc/libofx/NEWS
+  /usr/share/doc/libofx/README
+  /usr/share/doc/libofx/totest.txt
   /usr/share/libofx/dtd/ofc.dtd
   /usr/share/libofx/dtd/ofx160.dtd
   /usr/share/libofx/dtd/ofx201.dtd
@@ -78,75 +77,63 @@ Files included in the binary packages:
   /usr/lib/libofx.dll.a
   /usr/lib/libofx.la
   /usr/lib/pkgconfig/libofx.pc
-  /usr/share/doc/libofx-0.9.0/html/annotated.html
-  /usr/share/doc/libofx-0.9.0/html/config_8h-source.html
-  /usr/share/doc/libofx-0.9.0/html/doxygen.css
-  /usr/share/doc/libofx-0.9.0/html/doxygen.png
-  /usr/share/doc/libofx-0.9.0/html/files.html
-  /usr/share/doc/libofx-0.9.0/html/ftv2blank.png
-  /usr/share/doc/libofx-0.9.0/html/ftv2doc.png
-  /usr/share/doc/libofx-0.9.0/html/ftv2folderclosed.png
-  /usr/share/doc/libofx-0.9.0/html/ftv2folderopen.png
-  /usr/share/doc/libofx-0.9.0/html/ftv2lastnode.png
-  /usr/share/doc/libofx-0.9.0/html/ftv2link.png
-  /usr/share/doc/libofx-0.9.0/html/ftv2mlastnode.png
-  /usr/share/doc/libofx-0.9.0/html/ftv2mnode.png
-  /usr/share/doc/libofx-0.9.0/html/ftv2node.png
-  /usr/share/doc/libofx-0.9.0/html/ftv2plastnode.png
-  /usr/share/doc/libofx-0.9.0/html/ftv2pnode.png
-  /usr/share/doc/libofx-0.9.0/html/ftv2vertline.png
-  /usr/share/doc/libofx-0.9.0/html/functions.html
-  /usr/share/doc/libofx-0.9.0/html/functions_enum.html
-  /usr/share/doc/libofx-0.9.0/html/functions_eval.html
-  /usr/share/doc/libofx-0.9.0/html/functions_vars.html
-  /usr/share/doc/libofx-0.9.0/html/globals.html
-  /usr/share/doc/libofx-0.9.0/html/globals_enum.html
-  /usr/share/doc/libofx-0.9.0/html/globals_eval.html
-  /usr/share/doc/libofx-0.9.0/html/globals_func.html
-  /usr/share/doc/libofx-0.9.0/html/globals_type.html
-  /usr/share/doc/libofx-0.9.0/html/globals_vars.html
-  /usr/share/doc/libofx-0.9.0/html/index.html
-  /usr/share/doc/libofx-0.9.0/html/libofx_8h-source.html
-  /usr/share/doc/libofx-0.9.0/html/libofx_8h.html
-  /usr/share/doc/libofx-0.9.0/html/lt-ofx2qif_8c-source.html
-  /usr/share/doc/libofx-0.9.0/html/lt-ofxconnect_8c-source.html
-  /usr/share/doc/libofx-0.9.0/html/lt-ofxdump_8c-source.html
-  /usr/share/doc/libofx-0.9.0/html/main.html
-  /usr/share/doc/libofx-0.9.0/html/structLibofxFileFormatInfo.html
-  /usr/share/doc/libofx-0.9.0/html/structOfxAccountData.html
-  /usr/share/doc/libofx-0.9.0/html/structOfxCurrency.html
-  /usr/share/doc/libofx-0.9.0/html/structOfxFiLogin.html
-  /usr/share/doc/libofx-0.9.0/html/structOfxFiServiceInfo.html
-  /usr/share/doc/libofx-0.9.0/html/structOfxPayee.html
-  /usr/share/doc/libofx-0.9.0/html/structOfxPayment.html
-  /usr/share/doc/libofx-0.9.0/html/structOfxSecurityData.html
-  /usr/share/doc/libofx-0.9.0/html/structOfxStatementData.html
-  /usr/share/doc/libofx-0.9.0/html/structOfxStatusData.html
-  /usr/share/doc/libofx-0.9.0/html/structOfxTransactionData.html
-  /usr/share/doc/libofx-0.9.0/html/tab_b.gif
-  /usr/share/doc/libofx-0.9.0/html/tab_l.gif
-  /usr/share/doc/libofx-0.9.0/html/tab_r.gif
-  /usr/share/doc/libofx-0.9.0/html/tabs.css
-  /usr/share/doc/libofx-0.9.0/html/tree.html
+  /usr/share/doc/libofx/html/annotated.html
+  /usr/share/doc/libofx/html/config_8h-source.html
+  /usr/share/doc/libofx/html/doxygen.css
+  /usr/share/doc/libofx/html/doxygen.png
+  /usr/share/doc/libofx/html/files.html
+  /usr/share/doc/libofx/html/ftv2blank.png
+  /usr/share/doc/libofx/html/ftv2doc.png
+  /usr/share/doc/libofx/html/ftv2folderclosed.png
+  /usr/share/doc/libofx/html/ftv2folderopen.png
+  /usr/share/doc/libofx/html/ftv2lastnode.png
+  /usr/share/doc/libofx/html/ftv2link.png
+  /usr/share/doc/libofx/html/ftv2mlastnode.png
+  /usr/share/doc/libofx/html/ftv2mnode.png
+  /usr/share/doc/libofx/html/ftv2node.png
+  /usr/share/doc/libofx/html/ftv2plastnode.png
+  /usr/share/doc/libofx/html/ftv2pnode.png
+  /usr/share/doc/libofx/html/ftv2vertline.png
+  /usr/share/doc/libofx/html/functions.html
+  /usr/share/doc/libofx/html/functions_enum.html
+  /usr/share/doc/libofx/html/functions_eval.html
+  /usr/share/doc/libofx/html/functions_vars.html
+  /usr/share/doc/libofx/html/globals.html
+  /usr/share/doc/libofx/html/globals_enum.html
+  /usr/share/doc/libofx/html/globals_eval.html
+  /usr/share/doc/libofx/html/globals_func.html
+  /usr/share/doc/libofx/html/globals_type.html
+  /usr/share/doc/libofx/html/globals_vars.html
+  /usr/share/doc/libofx/html/index.html
+  /usr/share/doc/libofx/html/libofx_8h-source.html
+  /usr/share/doc/libofx/html/libofx_8h.html
+  /usr/share/doc/libofx/html/lt-ofx2qif_8c-source.html
+  /usr/share/doc/libofx/html/lt-ofxconnect_8c-source.html
+  /usr/share/doc/libofx/html/lt-ofxdump_8c-source.html
+  /usr/share/doc/libofx/html/main.html
+  /usr/share/doc/libofx/html/structLibofxFileFormatInfo.html
+  /usr/share/doc/libofx/html/structOfxAccountData.html
+  /usr/share/doc/libofx/html/structOfxCurrency.html
+  /usr/share/doc/libofx/html/structOfxFiLogin.html
+  /usr/share/doc/libofx/html/structOfxFiServiceInfo.html
+  /usr/share/doc/libofx/html/structOfxPayee.html
+  /usr/share/doc/libofx/html/structOfxPayment.html
+  /usr/share/doc/libofx/html/structOfxSecurityData.html
+  /usr/share/doc/libofx/html/structOfxStatementData.html
+  /usr/share/doc/libofx/html/structOfxStatusData.html
+  /usr/share/doc/libofx/html/structOfxTransactionData.html
+  /usr/share/doc/libofx/html/tab_b.gif
+  /usr/share/doc/libofx/html/tab_l.gif
+  /usr/share/doc/libofx/html/tab_r.gif
+  /usr/share/doc/libofx/html/tabs.css
+  /usr/share/doc/libofx/html/tree.html
 
 ------------------
 
 Port Notes:
 
------ version 0.9.0-1 -----
-ABI version bump.
-
------ version 0.8.3-1 -----
-Version bump.
-
------ version 0.8.2-1 -----
-Version and ABI bump, now built with cygport.
-
------ version 0.8.0-1 -----
-Version and ABI bump; now depends on libcurl3 for ofxconnect.
-
------ version 0.7.0-1 -----
-Initial release for Cygwin.
+----- version 0.9.1-1 -----
+Initial release for Cygwin 1.7.
 
 
 Cygwin port maintained by:
