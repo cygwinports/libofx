@@ -1,5 +1,5 @@
 category: Net
-requires: cygwin libcurl4 libgcc1 libglibmm2.4_1 libofx4 libxml++2.6_2
+requires: libcurl4 libgcc1 libglibmm2.4_1 libofx4 libxml++2.6_2
 sdesc: "OFX parser library (utilities)"
 ldesc: "This is the LibOFX library.  It is a API designed to allow
 applications to very easily support OFX command responses,
