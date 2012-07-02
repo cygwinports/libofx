@@ -3,11 +3,11 @@ HOMEPAGE="http://libofx.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 PATCH_URI="0.9.1-vpath.patch"
 
-PKG_NAMES="${PN} ${PN}4 ${PN}-common ${PN}-devel"
+PKG_NAMES="${PN} ${PN}5 ${PN}-common ${PN}-devel"
 libofx_CONTENTS="usr/bin/*.exe usr/share/man/man1/"
-libofx4_CONTENTS="usr/bin/cygofx-4.dll"
+libofx5_CONTENTS="usr/bin/cygofx-5.dll"
 libofx_common_CONTENTS="--exclude=html usr/share/doc/ usr/share/libofx/"
-libofx_devel_CONTENTS="usr/include/ usr/lib/ usr/share/doc/${PN}/html/"
+libofx_devel_CONTENTS="usr/include/ usr/lib/"
 
 DIFF_EXCLUDES="libofx.pc"
 
@@ -20,3 +20,5 @@ src_compile() {
 }
 
 DOCS="totest.txt"
+
+KEEP_LA_FILES="none"
