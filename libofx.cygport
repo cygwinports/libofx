@@ -1,9 +1,15 @@
-DESCRIPTION="Open Financial eXchange client"
+NAME="libofx"
+VERSION=0.9.6
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="Open Financial eXchange client library"
+DESCRIPTION="This is the LibOFX library.  It is a API designed to allow
+applications to very easily support OFX command responses,
+usually provided by financial institutions."
 HOMEPAGE="http://libofx.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
-PATCH_URI="0.9.1-vpath.patch"
+SRC_URI="mirror://sourceforge/libofx/libofx-${VERSION}.tar.gz"
 
-PKG_NAMES="${PN} ${PN}5 ${PN}-common ${PN}-devel"
+PKG_NAMES="${NAME} ${NAME}5 ${NAME}-common ${NAME}-devel"
 libofx_CONTENTS="usr/bin/*.exe usr/share/man/man1/"
 libofx5_CONTENTS="usr/bin/cygofx-5.dll"
 libofx_common_CONTENTS="--exclude=html usr/share/doc/ usr/share/libofx/"
