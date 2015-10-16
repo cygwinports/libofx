@@ -1,5 +1,5 @@
 NAME="libofx"
-VERSION=0.9.6
+VERSION=0.9.9
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="Open Financial eXchange client library"
@@ -8,12 +8,20 @@ applications to very easily support OFX command responses,
 usually provided by financial institutions."
 HOMEPAGE="http://libofx.sourceforge.net/"
 SRC_URI="mirror://sourceforge/libofx/libofx-${VERSION}.tar.gz"
+PATCH_URI="
+	http://pkgs.fedoraproject.org/cgit/libofx.git/plain/fix-ftbfs-gcc4.7.diff#/libofx-0.9.4-gcc47.patch
+	http://pkgs.fedoraproject.org/cgit/libofx.git/plain/libofx-0.9.8-cout.patch
+"
 
-PKG_NAMES="${NAME} ${NAME}5 ${NAME}-common ${NAME}-devel"
-libofx_CONTENTS="usr/bin/*.exe usr/share/man/man1/"
-libofx5_CONTENTS="usr/bin/cygofx-5.dll"
+PKG_NAMES="${NAME} ${NAME}6 ${NAME}-common ${NAME}-devel ${NAME}-tools"
+libofx_CATEGORY="_obsolete"
+libofx_REQUIRES="libofx-tools"
+libofx6_REQUIRES="libofx-common"
+libofx6_CONTENTS="usr/bin/cygofx-6.dll"
 libofx_common_CONTENTS="--exclude=html usr/share/doc/ usr/share/libofx/"
 libofx_devel_CONTENTS="usr/include/ usr/lib/"
+libofx_tools_CATEGORY="Net"
+libofx_tools_CONTENTS="usr/bin/*.exe usr/share/man/man1/"
 
 DIFF_EXCLUDES="libofx.pc"
 
